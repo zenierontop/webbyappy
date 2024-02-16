@@ -820,3 +820,19 @@ if (noWelcomeModal !== "1") {
 		welcomeModalDismissBtn.disabled = false;
 	}, 5000);
 }
+
+// ctrl alt del lets go baby
+buttons.ctrlAltDel.addEventListener('click', () => {
+    // Ctrl
+    VM.key(0xffe3, true);
+    // Alt
+    VM.key(0xffe9, true);
+    // Del
+    VM.key(0xffff, true);
+    // Ctrl
+    VM.key(0xffe3, false);
+    // Alt
+    VM.key(0xffe9, false);
+    // Del
+    VM.key(0xffff, false);
+});
